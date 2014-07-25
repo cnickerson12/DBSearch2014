@@ -3,7 +3,7 @@ class Investor < ActiveRecord::Base
 
 def self.search(search)
   if search
-    where('fund LIKE ?', "%#{search}%")
+    where('fund ILIKE ?', "%#{search}%")
   else
     scoped
   end
