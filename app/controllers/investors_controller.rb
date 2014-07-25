@@ -3,7 +3,7 @@ before_filter :authenticate_user!
 helper_method :sort_column, :sort_direction
 
   def index
-    @investors = Investor.search(params[:search]).order(sort_column + " " + sort_direction).paginate(:per_page => 15, :page => params[:page])
+    @investors = Investor.search(params[:search]).order(params[:sort] + " " + params[:direction]).paginate(:per_page => 15, :page => params[:page])
   end
 
   def show
