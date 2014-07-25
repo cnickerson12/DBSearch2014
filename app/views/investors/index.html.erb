@@ -1,0 +1,11 @@
+
+<h1>Investor Database Search</h1>
+
+<%= form_tag investors_path, :method => 'get', :id => "investors_search" do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+  <div id="investors"><%= render 'investors' %></div>
+<% end %>
+

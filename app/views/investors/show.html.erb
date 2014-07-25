@@ -1,0 +1,26 @@
+
+<% title "Investor" %>
+
+<p>
+  <strong>Fund Name:</strong>
+  <%= @investor.fund %>
+</p>
+<p>
+  <strong>Contact:</strong>
+  <%= @investor.contact %>
+</p>
+<p>
+  <strong>Email:</strong>
+  <%= @investor.email %>
+</p>
+<p>
+  <strong>Fund Size:</strong>
+  <%= @investor.fund_size %>
+</p>
+
+
+<p>
+  <%= link_to "Edit", edit_investor_path(@investor) %> |
+  <%= link_to "Destroy", @investor, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", investors_path %>
+</p>

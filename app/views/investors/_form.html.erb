@@ -1,0 +1,20 @@
+<%= form_for @investor do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :Fund %><br />
+    <%= f.text_field :fund %>
+  </p>
+  <p>
+    <%= f.label :contact %><br />
+    <%= f.text_field :contact %>
+  </p>
+  <p>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :fund_size %><br />
+    <%= f.text_field :fund_size %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

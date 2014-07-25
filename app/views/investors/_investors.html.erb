@@ -1,0 +1,21 @@
+<%= hidden_field_tag :direction, params[:direction] %>
+<%= hidden_field_tag :sort, params[:sort] %>
+<%= will_paginate @investors %>
+
+<table class="table">
+  <tr>
+      <th><%= sortable "Fund"%></th>
+      <th><%= sortable "Contact"%></th>
+      <th><%= sortable "Email"%></th>
+      <th><%= sortable "Fund_Size"%></th>
+  </tr>
+  <% for investor in @investors %>
+    <tr>
+        <td><%= investor.fund %></td>
+        <td><%= investor.contact %></td>
+        <td><%= investor.email %></td>
+        <td><%= investor.fund_size %></td>
+    </tr>
+  <% end %>
+</table>
+<%= will_paginate @investors %>
